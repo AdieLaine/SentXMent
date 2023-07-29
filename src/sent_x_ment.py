@@ -5,13 +5,14 @@ import openai
 import os
 import torch
 from typing import Tuple, Union
-
+import nltk
 from dotenv import load_dotenv
 from nltk.sentiment import SentimentIntensityAnalyzer
 
 # Load environment variables from .env file
 load_dotenv()
 
+nltk.download('vader_lexicon')
 # Get the OpenAI API key from the environment variable
 openai_api_key = os.getenv("OPENAI_API_KEY")
 if not openai_api_key:
