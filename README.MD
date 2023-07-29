@@ -15,6 +15,12 @@ On the machine learning front, Sent𝕏Ment makes use of advanced models that ar
 Overall, Sent𝕏Ment is a comprehensive tool for sentiment analysis that is capable of handling a wide range of texts, from short social media posts to lengthy documents. With its sophisticated techniques and advanced integration, it pushes the boundaries of what is possible in the field of sentiment analysis.
 
 
+## Hosted on Streamlit
+
+You can test out the application on Streamlit by clicking the link below:
+
+[Sent𝕏Ment Application](https://sentxment.streamlit.app/)
+
 ## Twitter Aggregation Algorithm
 
 Sent𝕏Ment's Twitter Aggregation Algorithm is a sophisticated algorithm that is capable of aggregating tweets from a specific user and analyzing the sentiment of the aggregated tweets. This algorithm is designed to provide a more accurate analysis of sentiment by taking into account the context and nuances of the tweets. We use the same logic as the public Twitter Algorithm, but we have added a few additional features to make it more accurate. We preserve the use of the Welford formula, more details can be found in the [Wikipedia article](https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Weighted_batched_version).
