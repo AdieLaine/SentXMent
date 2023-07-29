@@ -53,8 +53,8 @@ st.set_page_config(
     page_icon="🔬🗣️🚦",
     layout="centered",
     menu_items={
-        'Get Help': 'https://github.com/AdieLaine/',
-        'Report a bug': 'https://github.com/AdieLaine/issues',
+        'Get Help': 'https://github.com/AdieLaine/SentXMent',
+        'Report a bug': 'https://github.com/AdieLaine/SentXMent/issues',
         'About': """
             ## SentXMent - Sentiment Analysis
             Welcome to SentXMent - Sentiment Analysis! This application is dedicated to analyzing the sentiment of various texts, including tweets, articles, and more.

@@ -23,7 +23,7 @@ For further information, check out this article on the [Welford Algorithm](https
 
 
 <p align="center">
-  <img src="./images/agg.png" width="600">
+  <img src="./images/agg.png" width="500">
 </p>
 
 
