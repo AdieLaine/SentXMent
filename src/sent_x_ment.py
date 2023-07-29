@@ -4,11 +4,16 @@ import streamlit as st
 import openai
 import os
 import torch
+from typing import Tuple, Union
 
 from dotenv import load_dotenv
 from nltk.sentiment import SentimentIntensityAnalyzer
 
-from typing import Tuple, Union
+# Import the necessary NLTK module and download the data if not already downloaded
+if not st.secrets.get("nltk_data_downloaded", False):
+    import nltk
+    nltk.download('vader_lexicon')
+    st.secrets["nltk_data_downloaded"] = True
 
 # Load environment variables from .env file
 load_dotenv()
