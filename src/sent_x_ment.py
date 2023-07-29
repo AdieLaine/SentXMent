@@ -19,6 +19,35 @@ if not openai_api_key:
     raise ValueError("OPENAI_API_KEY environment variable not found.")
 openai.api_key = openai_api_key
 
+
+def get_env_variable(name, default=None):
+    """
+    Returns the value of the environment variable with the given name.
+    First tries to fetch it from Streamlit secrets, and if not available,
+    falls back to the local environment. If it's not found in either place,
+    returns the default value if provided.
+    
+    Args:
+        name (str): The name of the environment variable.
+        default (str, optional): The default value to be returned in case the environment variable is not found.
+
+    Returns:
+        str: The value of the environment variable, or the default value.
+    """
+    if st.secrets is not None and name in st.secrets:
+        # Fetch the secret from Streamlit secrets
+        return st.secrets[name]
+    else:
+        # Try to get the secret from the local environment
+        value = os.getenv(name)
+
+        if value is None and default is not None:
+            # If the environment variable is not found and a default value is provided,
+            # return the default value
+            return default
+        else:
+            return value
+
 # Streamlit configurations
 st.set_page_config(
     page_title="SentXMent - Sentiment Analysis",
