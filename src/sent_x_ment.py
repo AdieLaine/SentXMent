@@ -490,7 +490,7 @@ def main():
             st.session_state['nltk_data_checked'] = True
         except LookupError:
             nltk.download('vader_lexicon')
-            st.warning("NLTK data was missing but has now been downloaded.")
+            st.toast("NLTK data was missing but has now been downloaded.")
             st.session_state['nltk_data_checked'] = True
 
     # Sentiment analysis workflow
